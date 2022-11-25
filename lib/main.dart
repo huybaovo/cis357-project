@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mood_app/greeting.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,13 +23,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Greeting(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+class MoodSelection extends StatefulWidget {
+  MoodSelection({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -42,10 +43,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MoodSelectionState createState() => _MoodSelectionState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MoodSelectionState extends State<MoodSelection> {
   int _counter = 0;
 
   void _incrementCounter() {
