@@ -56,6 +56,14 @@ class _MoodSelectionState extends State<MoodSelection> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
+      _counter++; // place holder for now
+    });
+  }
+
+  void _moodLevel() {
+    // This action will send an integer of 1-5 for data based on what
+    // face is tapped on.
+    setState(() {
       _counter++;
     });
   }
@@ -95,11 +103,47 @@ class _MoodSelectionState extends State<MoodSelection> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'How are you feeling today?',
+              style: TextStyle(fontSize: 25),
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/exploding.png', height: 50, width: 50,
+                  ),
+                  onPressed: _moodLevel,
+                ),
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/sad.jpg', height: 50, width: 50,
+                  ),
+                  onPressed: _moodLevel,
+                ),
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/neutral.png', height: 50, width: 50,
+                  ),
+                  onPressed: _moodLevel,
+                ),
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/smiley.png', height: 50, width: 50,
+                  ),
+                  onPressed: _moodLevel,
+                ),
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/happyEmoji.png', height: 50, width: 50,
+                  ),
+                  onPressed: _moodLevel,
+                ),
+              ],
             ),
           ],
         ),
