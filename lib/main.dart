@@ -61,8 +61,8 @@ class _MoodSelectionState extends State<MoodSelection> {
   }
 
   void _moodLevel() {
-    // This action will send an integer of 1-5 for data based on what
-    // face is tapped on.
+    // This action currently does nothing but based on what is selected
+    // will prop certain actions.
     setState(() {
       _counter++;
     });
