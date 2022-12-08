@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mood_app/main.dart';
 
 final List<String> questions = <String>
-['Events today make me look forward to tomorrow.', 'I felt that I spent my time well today.',
+['I have something to look forward to tomorrow.', 'I felt that I spent my time well today.',
 'I ate well today.','I have slept well for today.',
 'I feel energetic.','I feel relaxed and not stressed.',
 'I am optimistic today.','I feel enthusiastic today.',
@@ -17,7 +17,12 @@ class FillForm extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Questions'),
-
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.cancel),
+              onPressed: (){Navigator.pop(context);},
+            ),
+          ],
         ),
         body: ListView.separated(
           padding: const EdgeInsets.all(8),
@@ -43,8 +48,13 @@ class FillForm extends StatelessWidget {
           },
           separatorBuilder: (BuildContext context, int index) => const Divider(),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {Navigator.pop(context);},
+          child: const Icon(Icons.check),
+        ),
       ),
     );
   }
 }
 
+// class
