@@ -49,14 +49,10 @@ class MoodSelection extends StatefulWidget {
 }
 
 class _MoodSelectionState extends State<MoodSelection> {
-
-
   void _moodLevel() {
     // This action currently does nothing but based on what is selected
     // will prop certain actions.
-    setState(() {
-
-    });
+    setState(() {});
   }
 
   @override
@@ -69,143 +65,169 @@ class _MoodSelectionState extends State<MoodSelection> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple[200],
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'How are you feeling today?',
-              style: TextStyle(fontSize: 25),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/thinking.png', height: 50, width: 50,
-
+        child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                Colors.white,
+                Color(0xff9ad0faff),
+                Colors.blueGrey,
+              ])),
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Invoke "debug painting" (press "p" in the console, choose the
+            // "Toggle Debug Paint" action from the Flutter Inspector in Android
+            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+            // to see the wireframe for each widget.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'How are you feeling today?',
+                style: TextStyle(fontSize: 25),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  IconButton(
+                    iconSize: 50,
+                    icon: Image.asset(
+                      'assets/images/thinking.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FillForm()));
+                    },
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const FillForm())
-                    );
-                  },
-                ),
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/happy.png', height: 50, width: 50,
-
+                  IconButton(
+                    iconSize: 50,
+                    icon: Image.asset(
+                      'assets/images/happy.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                                title: Text('You are HAPPY'),
+                                content: Text(
+                                    'Good to know! You are one lucky person :D'),
+                              ));
+                    },
                   ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('You are HAPPY'),
-                          content: Text('Good to know! You are one lucky person :D'),
-                        ));
-                  },
-                ),
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/neutral2.png', height: 50, width: 50,
+                  IconButton(
+                    iconSize: 50,
+                    icon: Image.asset(
+                      'assets/images/neutral2.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                                title: Text('Neutral'),
+                                content: Text(
+                                    'Exciting things are waiting for you ^.^'),
+                              ));
+                    },
                   ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Neutral'),
-                          content: Text('Exciting things are waiting for you ^.^'),
-                        ));
-                  },
-                ),
-
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/sad.png', height: 50, width: 50,
-
+                  IconButton(
+                    iconSize: 50,
+                    icon: Image.asset(
+                      'assets/images/sad.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                                title: Text('Aw...'),
+                                content: Text(
+                                    "Don't worry! I'll be right here with you <3"),
+                              ));
+                    },
                   ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Aw...'),
-                          content: Text("Don't worry! I'll be right here with you <3"),
-                        ));
-                  },
-                ),
-
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/cry.png', height: 50, width: 50,
-
+                  IconButton(
+                    iconSize: 50,
+                    icon: Image.asset(
+                      'assets/images/cry.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                                title: Text('Hi there !'),
+                                content: Text(
+                                    'Cry as much as you want. Then I can help you feel better ~.~'),
+                              ));
+                    },
                   ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Hi there !'),
-                          content: Text('Cry as much as you want. Then I can help you feel better ~.~'),
-                        ));
-                  },
-                ),
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/angry.png', height: 50, width: 50,
-
-
+                  IconButton(
+                    iconSize: 50,
+                    icon: Image.asset(
+                      'assets/images/angry.png',
+                      height: 50,
+                      width: 50,
+                    ),
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                                title: Text('Oops'),
+                                content: Text(
+                                    "You will not be angry anymore after seeing this ><"),
+                                actions: [
+                                  TextButton(
+                                    child: Text('See what ?'),
+                                    onPressed: () {
+                                      showDialog(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                          title: Text('Hello from me...'),
+                                          content: Image.network(
+                                              'https://media.tenor.com/8UkZbBUUAtUAAAAC/cute-rabbit.gif'),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ));
+                    },
                   ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Oops'),
-                          content: Text("You will not be angry anymore after seeing this ><"),
-                          actions: [
-                            TextButton(
-                                child: Text('See what ?'),
-                                onPressed: () {
-                                  showDialog(
-                                      context: context,
-                                      builder: (context) => AlertDialog(
-                                        title: Text('Hello from me...'),
-                                        content: Image.network('https://media.tenor.com/8UkZbBUUAtUAAAAC/cute-rabbit.gif'),
-
-                                      ),
-                                  );
-                                },
-                            ),
-
-                          ],
-                        ));
-                  },
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
-

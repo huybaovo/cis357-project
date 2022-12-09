@@ -24,7 +24,9 @@ class _FinalPageState extends State<FinalPage> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurple[200],
           title: Text('Improve your mood :)'),
+          centerTitle: true,
           automaticallyImplyLeading: false,
           leading: IconButton(
             onPressed: () {
@@ -48,8 +50,7 @@ class _FinalPageState extends State<FinalPage> {
                                 onPressed: () => Navigator.pop(context),
                               )
                             ],
-                      )
-                  );
+                          ));
                 },
                 icon: const Icon(Icons.star))
           ],
@@ -58,7 +59,8 @@ class _FinalPageState extends State<FinalPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.network('https://cdn.dribbble.com/users/1421577/screenshots/4859470/pandamediatte.gif',
+              Image.network(
+                'https://cdn.dribbble.com/users/1421577/screenshots/4859470/pandamediatte.gif',
                 height: 300,
                 width: 500,
               ),
@@ -75,11 +77,8 @@ class _FinalPageState extends State<FinalPage> {
                       shadowColor: Colors.greenAccent,
                       elevation: 3,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32.0)
-                      ),
-                      minimumSize: Size(120, 60)
-                  ),
-
+                          borderRadius: BorderRadius.circular(32.0)),
+                      minimumSize: Size(120, 60)),
                   child: Text("LET'S MEDITATE ^_^"),
                   onPressed: followLink,
                 ),
@@ -87,7 +86,8 @@ class _FinalPageState extends State<FinalPage> {
               const Divider(
                 color: Colors.white,
               ),
-              Image.network('https://media.tenor.com/8UkZbBUUAtUAAAAC/cute-rabbit.gif',
+              Image.network(
+                'https://media.tenor.com/8UkZbBUUAtUAAAAC/cute-rabbit.gif',
                 height: 300,
                 width: 500,
               ),
@@ -101,19 +101,17 @@ class _FinalPageState extends State<FinalPage> {
                   style: ElevatedButton.styleFrom(
                       elevation: 3,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32.0)
-                      ),
-                      minimumSize: Size(120, 60)
-                  ),
+                          borderRadius: BorderRadius.circular(32.0)),
+                      minimumSize: Size(120, 60)),
                   child: Text("LET'S GO RUNNING ^_^"),
                   onPressed: followLink,
-
                 ),
               ),
               const Divider(
                 color: Colors.white,
               ),
-              Image.network('https://media.tenor.com/PaWj2HJ3rBsAAAAM/listening-to-music-headphones.gif',
+              Image.network(
+                'https://media.tenor.com/PaWj2HJ3rBsAAAAM/listening-to-music-headphones.gif',
                 height: 300,
                 width: 500,
               ),
@@ -130,10 +128,8 @@ class _FinalPageState extends State<FinalPage> {
                       shadowColor: Colors.greenAccent,
                       elevation: 3,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(32.0)
-                      ),
-                      minimumSize: Size(120, 60)
-                  ),
+                          borderRadius: BorderRadius.circular(32.0)),
+                      minimumSize: Size(120, 60)),
                   child: Text("LET'S LISTEN TO A SONG ~.~"),
                   onPressed: followLink,
                 ),

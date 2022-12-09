@@ -30,10 +30,37 @@ class _GreetingState extends State<Greeting> {
     return Scaffold(
         body: Center(
             child: Container(
-                child: Image.asset(
-      'assets/images/Logo.png',
-      height: 400,
-      width: 400,
-    ))));
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+            Colors.white,
+            Color(0xff3c9786ff),
+            Colors.blueGrey,
+          ])),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+              child: Image.asset(
+            'assets/images/Logo.png',
+            height: 400,
+            width: 400,
+          )),
+          Container(
+              child: Text(
+            "Hey, How are you today?",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                fontStyle: FontStyle.italic),
+          ))
+        ],
+      ),
+    )));
   }
 }
