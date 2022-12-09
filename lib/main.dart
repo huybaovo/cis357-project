@@ -109,7 +109,7 @@ class _MoodSelectionState extends State<MoodSelection> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   IconButton(
-                    iconSize: 50,
+                    iconSize: 48,
                     icon: Image.asset(
                       'assets/images/thinking.png',
                       height: 50,
@@ -123,7 +123,7 @@ class _MoodSelectionState extends State<MoodSelection> {
                     },
                   ),
                   IconButton(
-                    iconSize: 50,
+                    iconSize: 48,
                     icon: Image.asset(
                       'assets/images/happy.png',
                       height: 50,
@@ -140,7 +140,7 @@ class _MoodSelectionState extends State<MoodSelection> {
                     },
                   ),
                   IconButton(
-                    iconSize: 50,
+                    iconSize: 48,
                     icon: Image.asset(
                       'assets/images/neutral2.png',
                       height: 50,
@@ -157,7 +157,7 @@ class _MoodSelectionState extends State<MoodSelection> {
                     },
                   ),
                   IconButton(
-                    iconSize: 50,
+                    iconSize: 48,
                     icon: Image.asset(
                       'assets/images/sad.png',
                       height: 50,
@@ -174,7 +174,7 @@ class _MoodSelectionState extends State<MoodSelection> {
                     },
                   ),
                   IconButton(
-                    iconSize: 50,
+                    iconSize: 48,
                     icon: Image.asset(
                       'assets/images/cry.png',
                       height: 50,
@@ -191,7 +191,7 @@ class _MoodSelectionState extends State<MoodSelection> {
                     },
                   ),
                   IconButton(
-                    iconSize: 50,
+                    iconSize: 48,
                     icon: Image.asset(
                       'assets/images/angry.png',
                       height: 50,

@@ -215,6 +215,7 @@ class FillForm extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.deepPurple[200],
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (BuildContext context) {
