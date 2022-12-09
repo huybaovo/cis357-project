@@ -56,7 +56,27 @@ class FillForm extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed:() {
-                                    debugPrint('Angry');
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                          title: Text('Oops ><'),
+                                          content: Text("I'm sorry to hear that, but I can help ^_^"),
+                                          actions: [
+                                            TextButton(
+                                                child: Text('Sure!'),
+
+                                                onPressed: () => Navigator.of(context).push(
+                                                              MaterialPageRoute(builder: (BuildContext context) {
+                                                                return const FinalPage();}),),
+                                            ),
+                                            TextButton(
+                                                child: Text('Maybe later'),
+                                                onPressed: () => Navigator.pop(context),
+
+                                                ),
+                                          ],
+                                        )
+                                    );
                                   },
                                   icon: Icon(
                                     Icons.sentiment_very_dissatisfied,
@@ -65,7 +85,26 @@ class FillForm extends StatelessWidget {
                               ),
                               IconButton(
                                   onPressed:() {
-                                    debugPrint('Less Angry');
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                          title: Text('Hmm...'),
+                                          content: Text("Do you want to feel better?"),
+                                          actions: [
+                                            TextButton(
+                                              child: Text('Duh!!!'),
+
+                                              onPressed: () => Navigator.of(context).push(
+                                                MaterialPageRoute(builder: (BuildContext context) {
+                                                  return const FinalPage();}),),
+                                            ),
+                                            TextButton(
+                                              child: Text('Maybe later'),
+                                              onPressed: () => Navigator.pop(context),
+                                            ),
+                                          ],
+                                        )
+                                    );
                                   },
                                   icon: Icon(
                                     Icons.sentiment_dissatisfied,
@@ -74,7 +113,19 @@ class FillForm extends StatelessWidget {
                               ),
                               IconButton(
                                   onPressed:() {
-                                    debugPrint('Neutral');
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                          title: Text('Hey!'),
+                                          content: Text("I bet you are doing better than you think ^^"),
+                                          actions: [
+                                            TextButton(
+                                              child: Text('Thank you :)'),
+                                              onPressed: () => Navigator.pop(context),
+                                            ),
+                                          ],
+                                        )
+                                    );
                                   },
                                   icon: Icon(
                                     Icons.sentiment_neutral,
@@ -83,8 +134,20 @@ class FillForm extends StatelessWidget {
                               ),
                               IconButton(
                                   onPressed:() {
-                                    debugPrint('OK');
-                                  },
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                          title: Text('Wow!'),
+                                          content: Text("That's great. Keep up with the good habit >.< "),
+                                          actions: [
+                                            TextButton(
+                                              child: Text('Thank you ~.~'),
+                                              onPressed: () => Navigator.pop(context),
+                                            ),
+                                          ],
+                                        )
+                                    );
+                                    },
                                   icon: Icon(
                                     Icons.sentiment_satisfied,
                                     color: Colors.lightGreen,
@@ -92,7 +155,19 @@ class FillForm extends StatelessWidget {
                               ),
                               IconButton(
                                   onPressed:() {
-                                    debugPrint('Happy');
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => AlertDialog(
+                                          title: Text('Awesome *_*'),
+                                          content: Text("Hurry complete the form to feel even better ^_^"),
+                                          actions: [
+                                            TextButton(
+                                              child: Text("Can't wait !!!"),
+                                              onPressed: () => Navigator.pop(context),
+                                            ),
+                                          ],
+                                        )
+                                    );
                                   },
                                   icon: Icon(
                                     Icons.sentiment_very_satisfied,
@@ -100,15 +175,7 @@ class FillForm extends StatelessWidget {
                                     size: 50,)
                               ),
                             ],
-
                           )
-                          // TextField(
-                          //   decoration: InputDecoration(
-                          //     border: OutlineInputBorder(),
-                          //     hintText: 'Enter 1 to 10 (Disagree/Agree)',
-                          //   ),
-                          //   keyboardType: TextInputType.number,
-                          // ),
                         ],
                     ),
                 ),
