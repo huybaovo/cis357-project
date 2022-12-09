@@ -27,11 +27,6 @@ class _GreetingState extends State<Greeting> {
                 )));
   }
 
-  _displayGreeting() async {
-    await Future.delayed(Duration(milliseconds: 1500), () {});
-    var displayGreeting = true;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
