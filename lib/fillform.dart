@@ -146,8 +146,7 @@ class FillForm extends StatelessWidget {
                                             ),
                                           ],
                                         )
-                                    );
-                                    },
+                                    );                                  },
                                   icon: Icon(
                                     Icons.sentiment_satisfied,
                                     color: Colors.lightGreen,
@@ -175,7 +174,15 @@ class FillForm extends StatelessWidget {
                                     size: 50,)
                               ),
                             ],
+
                           )
+                          // TextField(
+                          //   decoration: InputDecoration(
+                          //     border: OutlineInputBorder(),
+                          //     hintText: 'Enter 1 to 10 (Disagree/Agree)',
+                          //   ),
+                          //   keyboardType: TextInputType.number,
+                          // ),
                         ],
                     ),
                 ),

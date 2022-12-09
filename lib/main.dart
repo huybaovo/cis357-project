@@ -117,13 +117,27 @@ class _MoodSelectionState extends State<MoodSelection> {
                   icon: Image.asset('assets/images/happy.png', height: 50, width: 50,
 
                   ),
-                  onPressed: _moodLevel,
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text('You are HAPPY'),
+                          content: Text('Good to know! You are one lucky person :D'),
+                        ));
+                  },
                 ),
                 IconButton(
                   iconSize: 50,
                   icon: Image.asset('assets/images/neutral2.png', height: 50, width: 50,
                   ),
-                  onPressed: _moodLevel,
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text('Neutral'),
+                          content: Text('Exciting things are waiting for you ^.^'),
+                        ));
+                  },
                 ),
 
                 IconButton(
@@ -131,7 +145,14 @@ class _MoodSelectionState extends State<MoodSelection> {
                   icon: Image.asset('assets/images/sad.png', height: 50, width: 50,
 
                   ),
-                  onPressed: _moodLevel,
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text('Aw...'),
+                          content: Text("Don't worry! I'll be right here with you <3"),
+                        ));
+                  },
                 ),
 
                 IconButton(
@@ -139,7 +160,14 @@ class _MoodSelectionState extends State<MoodSelection> {
                   icon: Image.asset('assets/images/cry.png', height: 50, width: 50,
 
                   ),
-                  onPressed: _moodLevel,
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text('Hi there !'),
+                          content: Text('Cry as much as you want. Then I can help you feel better ~.~'),
+                        ));
+                  },
                 ),
                 IconButton(
                   iconSize: 50,
@@ -147,7 +175,30 @@ class _MoodSelectionState extends State<MoodSelection> {
 
 
                   ),
-                  onPressed: _moodLevel,
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: Text('Oops'),
+                          content: Text("You will not be angry anymore after seeing this ><"),
+                          actions: [
+                            TextButton(
+                                child: Text('See what ?'),
+                                onPressed: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text('Hello from me...'),
+                                        content: Image.network('https://media.tenor.com/8UkZbBUUAtUAAAAC/cute-rabbit.gif'),
+
+                                      ),
+                                  );
+                                },
+                            ),
+
+                          ],
+                        ));
+                  },
                 ),
               ],
             ),
