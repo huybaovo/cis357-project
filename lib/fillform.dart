@@ -52,7 +52,7 @@ class FillForm extends StatelessWidget {
                           Text('${questions[index]}', textScaleFactor: 1.2,),
                           Divider(),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               IconButton(
                                   onPressed:() {
