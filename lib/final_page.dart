@@ -58,7 +58,10 @@ class _FinalPageState extends State<FinalPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset('assets/images/happy.png'),
+              Image.network('https://cdn.dribbble.com/users/1421577/screenshots/4859470/pandamediatte.gif',
+                height: 300,
+                width: 500,
+              ),
               const Divider(
                 color: Colors.white,
               ),
@@ -66,6 +69,17 @@ class _FinalPageState extends State<FinalPage> {
                 target: LinkTarget.blank,
                 uri: Uri.parse('https://youtu.be/inpok4MKVLM'),
                 builder: (context, followLink) => ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.teal,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.greenAccent,
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32.0)
+                      ),
+                      minimumSize: Size(120, 60)
+                  ),
+
                   child: Text("LET'S MEDITATE ^_^"),
                   onPressed: followLink,
                 ),
@@ -73,7 +87,10 @@ class _FinalPageState extends State<FinalPage> {
               const Divider(
                 color: Colors.white,
               ),
-              Image.asset('assets/images/angry.png'),
+              Image.network('https://media.tenor.com/8UkZbBUUAtUAAAAC/cute-rabbit.gif',
+                height: 300,
+                width: 500,
+              ),
               const Divider(
                 color: Colors.white,
               ),
@@ -81,14 +98,25 @@ class _FinalPageState extends State<FinalPage> {
                 target: LinkTarget.blank,
                 uri: Uri.parse('https://youtu.be/inpok4MKVLM'),
                 builder: (context, followLink) => ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32.0)
+                      ),
+                      minimumSize: Size(120, 60)
+                  ),
                   child: Text("LET'S GO RUNNING ^_^"),
                   onPressed: followLink,
+
                 ),
               ),
               const Divider(
                 color: Colors.white,
               ),
-              Image.asset('assets/images/neutral2.png'),
+              Image.network('https://media.tenor.com/PaWj2HJ3rBsAAAAM/listening-to-music-headphones.gif',
+                height: 300,
+                width: 500,
+              ),
               const Divider(
                 color: Colors.white,
               ),
@@ -96,6 +124,16 @@ class _FinalPageState extends State<FinalPage> {
                 target: LinkTarget.blank,
                 uri: Uri.parse('https://youtu.be/waSIxIPEJDE'),
                 builder: (context, followLink) => ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.greenAccent,
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32.0)
+                      ),
+                      minimumSize: Size(120, 60)
+                  ),
                   child: Text("LET'S LISTEN TO A SONG ~.~"),
                   onPressed: followLink,
                 ),
