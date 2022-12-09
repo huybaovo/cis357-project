@@ -74,7 +74,6 @@ class _MoodSelectionState extends State<MoodSelection> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-<<<<<<< HEAD
         child: Container(
           decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -222,106 +221,6 @@ class _MoodSelectionState extends State<MoodSelection> {
                                 ],
                               ));
                     },
-=======
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'How are you feeling today?',
-              style: TextStyle(fontSize: 25),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                IconButton(
-                  iconSize: 48,
-                  icon: Image.asset('assets/images/thinking.png', height: 50, width: 50,
-
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const FillForm())
-                    );
-                  },
-                ),
-                IconButton(
-                  iconSize: 48,
-                  icon: Image.asset('assets/images/happy.png', height: 50, width: 50,
-
-                  ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('You are HAPPY'),
-                          content: Text('Good to know! You are one lucky person :D'),
-                        ));
-                  },
-                ),
-                IconButton(
-                  iconSize: 48,
-                  icon: Image.asset('assets/images/neutral2.png', height: 50, width: 50,
-                  ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Neutral'),
-                          content: Text('Exciting things are waiting for you ^.^'),
-                        ));
-                  },
-                ),
-
-                IconButton(
-                  iconSize: 48,
-                  icon: Image.asset('assets/images/sad.png', height: 50, width: 50,
-
-                  ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Aw...'),
-                          content: Text("Don't worry! I'll be right here with you <3"),
-                        ));
-                  },
-                ),
-
-                IconButton(
-                  iconSize: 48,
-                  icon: Image.asset('assets/images/cry.png', height: 50, width: 50,
-
-                  ),
-                  onPressed: () {
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text('Hi there !'),
-                          content: Text('Cry as much as you want. Then I can help you feel better ~.~'),
-                        ));
-                  },
-                ),
-                IconButton(
-                  iconSize: 48,
-                  icon: Image.asset('assets/images/angry.png', height: 50, width: 50,
-
-
->>>>>>> a6e985f (Fixed size)
                   ),
                 ],
               ),
