@@ -23,6 +23,11 @@ You will need Android Studio version 2020.3.1 (Artic Fox) or later to operate Fl
 
 # Step-by-step Coding Instructions
 
+On the command line, run flutter --version to verify that the SDK is installed and recognized.
+Afterward:
+- Make sure the full path to your flutter/bin is added to your Path under Environmental Variables.
+- Run flutter doctor to make sure that the path to flutter is recognized.
+- Download the Dart and Flutter extensions on Android Studio.
 
 
 # Further Discussion/Conclusion
