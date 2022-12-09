@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mood_app/main.dart';
+import 'package:delayed_display/delayed_display.dart';
 
 class Greeting extends StatefulWidget {
   const Greeting({Key? key}) : super(key: key);
-
   @override
   _GreetingState createState() => _GreetingState();
 }
 
 class _GreetingState extends State<Greeting> {
+  var displayGreeting = false;
+
   @override
   void initState() {
     super.initState();
@@ -23,6 +25,11 @@ class _GreetingState extends State<Greeting> {
             builder: (context) => MoodSelection(
                   title: 'Mood Selection',
                 )));
+  }
+
+  _displayGreeting() async {
+    await Future.delayed(Duration(milliseconds: 1500), () {});
+    var displayGreeting = true;
   }
 
   @override
@@ -49,16 +56,17 @@ class _GreetingState extends State<Greeting> {
             height: 400,
             width: 400,
           )),
-          Container(
+          DelayedDisplay(
+              delay: Duration(milliseconds: 1500),
               child: Text(
-            "Hey, How are you today?",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-                fontStyle: FontStyle.italic),
-          ))
+                "Hey, How are you today?",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    fontStyle: FontStyle.italic),
+              ))
         ],
       ),
     )));
