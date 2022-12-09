@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -101,7 +102,8 @@ class _MoodSelectionState extends State<MoodSelection> {
               children: <Widget>[
                 IconButton(
                   iconSize: 50,
-                  icon: Image.asset('assets/images/exploding.png', height: 50, width: 50,
+                  icon: Image.asset('assets/images/thinking.png', height: 50, width: 50,
+
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -112,25 +114,38 @@ class _MoodSelectionState extends State<MoodSelection> {
                 ),
                 IconButton(
                   iconSize: 50,
-                  icon: Image.asset('assets/images/sad.jpg', height: 50, width: 50,
+                  icon: Image.asset('assets/images/happy.png', height: 50, width: 50,
+
                   ),
                   onPressed: _moodLevel,
                 ),
                 IconButton(
                   iconSize: 50,
-                  icon: Image.asset('assets/images/neutral.png', height: 50, width: 50,
+                  icon: Image.asset('assets/images/neutral2.png', height: 50, width: 50,
+                  ),
+                  onPressed: _moodLevel,
+                ),
+
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/sad.png', height: 50, width: 50,
+
+                  ),
+                  onPressed: _moodLevel,
+                ),
+
+                IconButton(
+                  iconSize: 50,
+                  icon: Image.asset('assets/images/cry.png', height: 50, width: 50,
+
                   ),
                   onPressed: _moodLevel,
                 ),
                 IconButton(
                   iconSize: 50,
-                  icon: Image.asset('assets/images/smiley.png', height: 50, width: 50,
-                  ),
-                  onPressed: _moodLevel,
-                ),
-                IconButton(
-                  iconSize: 50,
-                  icon: Image.asset('assets/images/happyEmoji.png', height: 50, width: 50,
+                  icon: Image.asset('assets/images/angry.png', height: 50, width: 50,
+
+
                   ),
                   onPressed: _moodLevel,
                 ),
