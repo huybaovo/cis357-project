@@ -7,19 +7,24 @@ the many feature the Flutter framework offers.
 
 # Getting Started With Flutter
 
-Flutter is an open-source UI development kit framework created by Google to develop 
-cross-platform applications using Windows, macOS, Linux, and ChromeOS as the operating system. 
+Flutter is an open-source UI development kit framework created by Google to develop
+cross-platform applications using Windows, macOS, Linux, and ChromeOS as the operating system.
 Flutter can be used with any text editors with their command-line tools but is recommended to
 use with their plugin on VS Studio Code,VS Code, Android studio, or IntelliJ as the IDE.
 
-To get started with Flutter, download the Flutter SDK offered from the official site and install it into
-any directories that does not need require elevated privileges.
+To get started with Flutter, download the Flutter SDK offered from the official site for your OS
+and install it into any directories that does not need require elevated privileges.
 - [Download: Get Flutter Here](https://docs.flutter.dev/get-started/install)
 
-You will need Android Studio version 2020.3.1 (Artic Fox) or later to operate Flutter for this demo.
-- [Download: Get Latest Android Studio here](https://developer.android.com/studio)
+You also will need Android Studio version 2020.3.1 (Artic Fox) or later to operate Flutter for this
+demo application.
+- [Download: Get Latest Android Studio Here](https://developer.android.com/studio)
 
-
+Next, watch the installation video to help with the installation of Flutter onto your device.
+Note that the video will use VS code to install Flutter and also go over installing Flutter into
+VS code.
+- [Installation Video: Codemy.com Video](https://www.youtube.com/watch?v=VFDbZk2xhO4)
+- [Optional: Visual Studio Code](https://code.visualstudio.com/download)
 
 # Step-by-step Coding Instructions
 
@@ -32,13 +37,11 @@ Afterward:
 
 # Further Discussion/Conclusion
 
-
+- [Repository Link](https://github.com/huybaovo/cis357-project)
 
 # See Also:
 
-Documentation Help:
+Flutter Documentation Help and Examples:
 - [Online Documentations](https://flutter.dev/docs)
 - [Documentations: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-Installation Video Help:
-- [Codemy.com Video](https://www.youtube.com/watch?v=VFDbZk2xhO4)
