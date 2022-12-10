@@ -53,7 +53,7 @@ An example of transitioning by pushing widgets to another screen.
           child: const Icon(Icons.check),
         ),
 ```
-An example of how to easily embed widgets inside of another widget:
+An example of how to easily embed widgets inside of another widget:                                                
 ![ex](https://user-images.githubusercontent.com/10284866/206826497-35c25a36-adc1-4c1d-b1c8-389e80ecc80f.jpeg)
 
 # Further Discussion/Conclusion
