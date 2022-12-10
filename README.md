@@ -1,8 +1,8 @@
 # Overview
 
-In this demonstration we will be building a demo mood mobile app that gives words of encouragement
-and advice to uplift the users day based on what they select. For this demonstration purpose, 
-we will be focusing on using Flutter to implement the mood mobile app by using a some of 
+In this demonstration we will be building a demo mood mobile application that gives words of 
+encouragement and advice to uplift the users day based on what they select. For this demonstration 
+purpose, we will be focusing on using Flutter to implement the mood mobile app by using a some of 
 the many feature the Flutter framework offers.
 
 # Getting Started With Flutter
@@ -34,9 +34,34 @@ Afterward:
 - Run flutter doctor to make sure that the path to flutter is recognized.
 - Download the Dart and Flutter extensions on Android Studio.
 
+Demonstration Video:
+- [Youtube Demonstration Video]()
+
+When designing your widget, 
+
+An example of transitioning by pushing widgets to another screen.
+```
+ floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.deepPurple[200],
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (BuildContext context) {
+                return const FinalPage();
+              }),
+            );
+          },
+          child: const Icon(Icons.check),
+        ),
+```
 
 # Further Discussion/Conclusion
 
+While this is one way of implementing this demo mood mobile application, there are different 
+approaches to implement the questionnaire that we implemented using SingleChildScrollView, 
+IconButton, Text, and Row as some of the features Flutter SDK offers. By using third-party libraries,
+this is can be accomplished by using the SurveyKit Library by QuickBird Studio which offers creation
+of surveys inspired by the iOS ResearchKit Surveys. Another option of implementation is adjusting
+widget orders for styling and formatting of scaffolds, containers, columns, and rows.
 - [Repository Link](https://github.com/huybaovo/cis357-project)
 
 # See Also:
@@ -44,4 +69,4 @@ Afterward:
 Flutter Documentation Help and Examples:
 - [Online Documentations](https://flutter.dev/docs)
 - [Documentations: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
+- [udemy: Flutter Course](https://www.udemy.com/course/flutter-bootcamp-with-dart/?utm_source=adwords&utm_medium=udemyads&utm_campaign=GoogleFlutter_v.PROF_la.EN_cc.US&utm_content=deal4584&utm_term=_._ag_113411705010_._ad_622358216560_._kw__._de_c_._dm__._pl__._ti_dsa-1184681151762_._li_9017523_._pd__._&matchtype=&gclid=Cj0KCQiA1sucBhDgARIsAFoytUtY8hBfj8mECXDTBiv7fnpmfGZtjcugGYQJIFHGZNjWukCYPL5TBv0aAgEvEALw_wcB)
