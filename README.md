@@ -34,8 +34,9 @@ Afterward:
 - Run flutter doctor to make sure that the path to flutter is recognized.
 - Download the Dart and Flutter extensions on Android Studio.
 
-Demonstration Video:
-- [Youtube Demonstration Video]()
+Demonstration Videos:
+- [Demonstration Video](https://youtu.be/HE8GTFdEc6g)
+- [Mood App Presentation](https://youtu.be/cYBfWIdC_R4)
 
 When designing your widget, keep in mind that you embed different widgets within eachother to create
 a clean/easy widget stack.
