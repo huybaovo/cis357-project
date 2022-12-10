@@ -13,7 +13,7 @@ Flutter can be used with any text editors with their command-line tools but is r
 use with their plugin on VS Studio Code,VS Code, Android studio, or IntelliJ as the IDE.
 
 To get started with Flutter, download the Flutter SDK offered from the official site for your OS
-and install it into any directories that does not need require elevated privileges.
+and install it into any directory that does not require elevated privileges.
 - [Download: Get Flutter Here](https://docs.flutter.dev/get-started/install)
 
 You also will need Android Studio version 2020.3.1 (Artic Fox) or later to operate Flutter for this
