@@ -37,7 +37,8 @@ Afterward:
 Demonstration Video:
 - [Youtube Demonstration Video]()
 
-When designing your widget, 
+When designing your widget, keep in mind that you embed different widgets within eachother to create
+a clean/easy widget stack.
 
 An example of transitioning by pushing widgets to another screen.
 ```
